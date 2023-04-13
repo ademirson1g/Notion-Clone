@@ -16,12 +16,16 @@ $ Another step : install packages npm install
 $ Final step : run the command npm run dev and open localhost:5173
 ```
 
-### Server
+## Server
 
 The website has been deployed on netlify.
 * Website : https://64384ca95947f80586bdb5e1--splendorous-meerkat-11f39f.netlify.app
 
-### Branches
+## Tech stack
+
+The project was made using <b>HTML , Javascript and Tailwind</b>
+
+## Branches
 
 * main: What the production code and website looks like.
 * development: Testing the page on local.
