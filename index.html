@@ -38,14 +38,15 @@
               <i class="fa fa-unlock mr-3"></i>Editing
             </a>
             <span class="text-gray-400 mr-6">&#124;</span>
-            <a class="text-sm text-blue-600 hover:text-blue-900 cursor-pointer">Publish Space <i class="fas fa-chevron-down ml-1"></i></a>
+            <a class="text-sm text-blue-600 hover:text-blue-900 cursor-pointer">Publish Space <i
+                class="fas fa-chevron-down ml-1"></i></a>
           </div>
-        </div>        
+        </div>
       </div>
     </nav>
     <!-- box -->
-    <div class="flex justify-center">
-      <div class="border border-gray-200 rounded-lg p-2 flex items-center justify-between text-sm" style="width: 70%">
+    <div class="flex flex-col items-center justify-center">
+      <div class="border border-gray-200 rounded-lg p-2 flex items-center justify-between text-sm" style="width: 60%">
         <div class="flex items-center">
           <div class="bg-green-200 text-white rounded-sm w-8 h-8 flex items-center justify-center uppercase mr-2">
             <span>P</span>
@@ -59,12 +60,12 @@
             <img src="https://via.placeholder.com/50" alt="Placeholder image">
           </div>
           <span class="text-gray-400 ml-2">&#124;</span>
-          <div class="ml-1 flex items-center text-gray-700">
+          <div class="ml-1 flex text-gray-700">
             <span class="text-xs">&larr;</span>
             <span class="text-xs ml-0.5">0</span>
           </div>
         </div>
-        <div class="flex items-center">
+        <div class="flex">
           <div class="text-green-500">
             <i class="fas fa-check-circle fa-lg"></i>
           </div>
@@ -77,7 +78,48 @@
         </div>
       </div>
     </div>
+    <!-- Text -->
+    <div class="flex flex-col items-center mt-2">
+      <h4 class="mt-2 font-bold text-4xl text-left" style="width: 60%">Front-end developer test project</h4>
+      <div class="border-t border-gray-200 mt-2" style="width: 60%"></div>
+      <div class="mt-4" style="width: 60%">
+        <p class="text-sm">Your goal is to make a page that looks exactly like this one , and has the ability to create
+          H1 text simply by typing / then 1, then typing text and hitting enter.</p>
+        <!-- Typing area -->
+        <div class="relative">
+          <input class="w-full rounded-md mt-6" 
+                 type="text" 
+                 placeholder="Type / for blocks, @ for blocks or docs people"
+                 style="outline: none;">
+          <div class="absolute z-10 top-full mt-2
+                      bg-white border border-gray-300 rounded-md shadow-lg 
+                      invisible opacity-0"
+               style="width: 45%; height: 350px;">
+               <ul class="py-2">
+                <h1 class="text-black font-bold ml-2">Add Blocks</h1>
+                <p class="ml-2 text-sm text-gray-400">Keep trying to filter, or escape to exit</p>
+                <h1 class="ml-2 mt-2 text-gray-500">Filtering Keyword</h1>
+                <li class="ml-2 py-2 cursor-pointer hover:bg-gray-100">
+                  <span class="text-lg mr-2">
+                    <i class="fas fa-heading"></i>
+                  </span>
+                  <span class="text-base">Heading 1</span>
+                  <p class="text-sm text-gray-400 ml-8">Shortcut: type # + space</p>
+                </li>
+                <li class="ml-2 py-2 cursor-pointer hover:bg-gray-100">
+                  <span class="text-lg mr-2">
+                    <i class="fas fa-heading"></i>
+                  </span>
+                  <span class="text-base">Expandable Heading 1</span>
+                  <p class="text-sm text-gray-400 ml-8">Shortcut: type >># + space</p>
+                </li>
+              </ul>              
+          </div>
+        </div>
+      </div>
+    </div>    
   </div>
+  <script src="./scripts/dropdown-heading.js"></script>
 </body>
 
 </html>
