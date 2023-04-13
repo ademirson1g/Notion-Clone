@@ -87,37 +87,34 @@
           H1 text simply by typing / then 1, then typing text and hitting enter.</p>
         <!-- Typing area -->
         <div class="relative">
-          <input class="w-full rounded-md mt-6" 
-                 type="text" 
-                 placeholder="Type / for blocks, @ for blocks or docs people"
-                 style="outline: none;">
+          <input class="w-full rounded-md mt-6" type="text" placeholder="Type / for blocks, @ for blocks or docs people"
+            style="outline: none;">
           <div class="absolute z-10 top-full mt-2
                       bg-white border border-gray-300 rounded-md shadow-lg 
-                      invisible opacity-0"
-               style="width: 45%; height: 350px;">
-               <ul class="py-2">
-                <h1 class="text-black font-bold ml-2">Add Blocks</h1>
-                <p class="ml-2 text-sm text-gray-400">Keep trying to filter, or escape to exit</p>
-                <h1 class="ml-2 mt-2 text-gray-500">Filtering Keyword</h1>
-                <li class="ml-2 py-2 cursor-pointer hover:bg-gray-100">
-                  <span class="text-lg mr-2">
-                    <i class="fas fa-heading"></i>
-                  </span>
-                  <span class="text-base">Heading 1</span>
-                  <p class="text-sm text-gray-400 ml-8">Shortcut: type # + space</p>
-                </li>
-                <li class="ml-2 py-2 cursor-pointer hover:bg-gray-100">
-                  <span class="text-lg mr-2">
-                    <i class="fas fa-heading"></i>
-                  </span>
-                  <span class="text-base">Expandable Heading 1</span>
-                  <p class="text-sm text-gray-400 ml-8">Shortcut: type >># + space</p>
-                </li>
-              </ul>              
+                      invisible opacity-0" style="width: 45%; height: 350px;">
+            <ul class="py-2">
+              <h1 class="text-black font-bold ml-2 cursor-pointer">Add Blocks</h1>
+              <p class="ml-2 text-sm text-gray-400">Keep trying to filter, or escape to exit</p>
+              <h1 class="ml-2 mt-2 text-gray-500">Filtering Keyword</h1>
+              <li id="heading-1" class="ml-2 py-2 cursor-pointer hover:bg-gray-100">
+                <span class="text-lg mr-2">
+                  <i class="fas fa-heading"></i>
+                </span>
+                <span class="text-base">Heading 1</span>
+                <p class="text-sm text-gray-400 ml-8">Shortcut: type # + space</p>
+              </li>
+              <li class="ml-2 py-2 cursor-pointer hover:bg-gray-100">
+                <span class="text-lg mr-2">
+                  <i class="fas fa-heading"></i>
+                </span>
+                <span class="text-base">Expandable Heading 1</span>
+                <p class="text-sm text-gray-400 ml-8">Shortcut: type >># + space</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>    
+    </div>
   </div>
   <script src="./scripts/dropdown-heading.js"></script>
 </body>
