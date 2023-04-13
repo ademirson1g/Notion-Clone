@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <title>Notion Clone</title>
 </head>
 
@@ -14,66 +16,76 @@
   <div>
     <nav class="flex items-center justify-between flex-wrap p-6">
       <div class="flex items-center flex-shrink-0 text-black mr-6">
-        <i class="fas fa-angle-double-right text-gray-400 hover:text-black cursor-pointer"></i>
+        <button id="hamburger-button" class="block lg:hidden">
+          <i class="fas fa-bars"></i>
+        </button>
+        <a href="#" class="hidden lg:block">
+          <i class="fas fa-angle-double-right text-gray-400 hover:text-black cursor-pointer"></i>
+        </a>
       </div>
-      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div id="navigation-links" class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden">
         <div class="text-sm lg:flex-grow">
           <div class="flex items-center">
-            <span class="text-gray-400 mr-4 underline hover:text-black cursor-pointer"><i
-                class="fas fa-book-open mr-2"></i>Main</span>
+            <span class="text-gray-400 mr-4 underline hover:text-black cursor-pointer">
+              <i class="fas fa-book-open mr-2"></i>Main</span>
             <span class="mr-4 text-gray-400"> / </span>
-            <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-black mr-4">
+            <a href="#" class="block lg:inline-block lg:mt-0 text-gray-400 hover:text-black mr-4">
               Getting Started
             </a>
             <span class="mr-4 text-gray-400"> /</span>
-            <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-black truncate w-48">
+            <a href="#" class="block lg:inline-block lg:mt-0 text-gray-400 hover:text-black truncate w-48">
               Front-end developer test project
             </a>
           </div>
         </div>
         <div class="flex items-center">
-          <div class="relative flex justify-between items-center">
-            <a href="#"
-              class="inline-block text-sm px-4 py-2 leading-none text-gray-400 hover:text-gray-800 hover:bg-white mr-4">
+          <div class="relative flex justify-between items-center ml-auto">
+            <a href="#" class="inline-block text-sm px-4 py-2 leading-none text-gray-400 hover:text-gray-800 hover:bg-white mr-4">
               <i class="fa fa-unlock mr-3"></i>Editing
             </a>
             <span class="text-gray-400 mr-6">&#124;</span>
-            <a class="text-sm text-blue-600 hover:text-blue-900 cursor-pointer">Publish Space <i
-                class="fas fa-chevron-down ml-1"></i></a>
+            <a class="text-sm text-blue-600 hover:text-blue-900 cursor-pointer">Publish Space <i class="fas fa-chevron-down ml-1"></i></a>
           </div>
         </div>
       </div>
     </nav>
     <!-- box -->
     <div class="flex flex-col items-center justify-center">
-      <div class="border border-gray-200 rounded-lg p-2 flex items-center justify-between text-sm" style="width: 60%">
-        <div class="flex items-center">
-          <div class="bg-green-200 text-white rounded-sm w-8 h-8 flex items-center justify-center uppercase mr-2">
+      <div class="border border-gray-200 rounded-lg p-2 flex items-center justify-between text-sm" 
+           style="width: 60%">
+        <div class="flex items-center cursor-pointer">
+          <div class="bg-green-200 text-white rounded-sm 
+                     w-8 h-8 flex items-center justify-center uppercase mr-2">
             <span>P</span>
           </div>
-          <span class="text-gray-400 mr-1">&#124;</span>
-          <div class="mr-1 text-gray-700">
-            <span>0 min</span>
-          </div>
           <span class="text-gray-400 mr-2">&#124;</span>
-          <div class="rounded-full overflow-hidden w-6 h-6">
-            <img src="https://via.placeholder.com/50" alt="Placeholder image">
+          <div class="mr-1 text-gray-500">
+            <span class="flex">
+              <i class="las la-clock text-2xl"></i>
+              <p class="mt-1">0 min</p>
+            </span>
           </div>
           <span class="text-gray-400 ml-2">&#124;</span>
-          <div class="ml-1 flex text-gray-700">
-            <span class="text-xs">&larr;</span>
-            <span class="text-xs ml-0.5">0</span>
+          <div class="rounded-full overflow-hidden w-6 h-6 ml-3">
+            <img src="./images/profileImage.png" alt="Profile image">
+          </div>
+          <span class="text-gray-400 ml-3">&#124;</span>
+          <div class="ml-1 flex text-gray-500">
+            <span class="flex">
+              <i class="las la-arrow-left transform -rotate-45 origin-bottom-left mt-3 ml-2"></i>
+              <p class="mt-1">0</p>
+            </span>
           </div>
         </div>
-        <div class="flex">
-          <div class="text-green-500">
-            <i class="fas fa-check-circle fa-lg"></i>
+        <div class="flex cursor-pointer">
+          <div class="text-gray-700 text-2xl">
+            <i class="lar la-check-circle"></i>
           </div>
-          <div class="text-gray-700 ml-2">
-            <i class="fas fa-cloud-upload-alt fa-lg"></i>
+          <div class="text-green-700 ml-2 text-2xl">
+            <i class="las la-cloud"></i>
           </div>
-          <div class="text-gray-700 ml-2">
-            <i class="fas fa-ellipsis-h fa-lg"></i>
+          <div class="text-gray-700 ml-2 text-2xl">
+            <i class="las la-ellipsis-v"></i>
           </div>
         </div>
       </div>
@@ -87,8 +99,10 @@
           H1 text simply by typing / then 1, then typing text and hitting enter.</p>
         <!-- Typing area -->
         <div class="relative">
-          <input class="w-full rounded-md mt-6" type="text" placeholder="Type / for blocks, @ for blocks or docs people"
-            style="outline: none;">
+          <input class="w-full rounded-md mt-6" 
+                 type="text" 
+                 placeholder="Type / for blocks, @ for blocks or docs people"
+                 style="outline: none;">
           <div class="absolute z-10 top-full mt-2
                       bg-white border border-gray-300 rounded-md shadow-lg 
                       invisible opacity-0" style="width: 45%; height: 350px;">
@@ -98,14 +112,14 @@
               <h1 class="ml-2 mt-2 text-gray-500">Filtering Keyword</h1>
               <li id="heading-1" class="ml-2 py-2 cursor-pointer hover:bg-gray-100">
                 <span class="text-lg mr-2">
-                  <i class="fas fa-heading"></i>
+                  <i class="las la-text-width text-2xl"></i>
                 </span>
                 <span class="text-base">Heading 1</span>
                 <p class="text-sm text-gray-400 ml-8">Shortcut: type # + space</p>
               </li>
               <li class="ml-2 py-2 cursor-pointer hover:bg-gray-100">
                 <span class="text-lg mr-2">
-                  <i class="fas fa-heading"></i>
+                  <i class="las la-text-width text-2xl"></i>
                 </span>
                 <span class="text-base">Expandable Heading 1</span>
                 <p class="text-sm text-gray-400 ml-8">Shortcut: type >># + space</p>
@@ -117,6 +131,7 @@
     </div>
   </div>
   <script src="./scripts/dropdown-heading.js"></script>
+  <script src="./scripts/hamburger-menu.js"></script>
 </body>
 
 </html>
