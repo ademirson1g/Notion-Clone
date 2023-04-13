@@ -12,12 +12,6 @@ function initHeadingOne() {
   inputElement.focus();
   inputElement.select();
 
-  // Check if there is a saved input value in local storage
-  const savedInputValue = localStorage.getItem('headingOneInputValue');
-  if (savedInputValue) {
-    inputElement.value = savedInputValue;
-  }
-
   // Handle input events
   function handleInput() {
     if (inputElement.value.startsWith('/1')) {
@@ -29,9 +23,6 @@ function initHeadingOne() {
       dropdownElement.classList.add('invisible');
       inputValue = '';
     }
-
-    // Save input value to local storage
-    localStorage.setItem('headingOneInputValue', inputElement.value.trim());
   }
 
   inputElement.addEventListener('input', handleInput);
@@ -51,8 +42,6 @@ function initHeadingOne() {
           newInputElement.focus();
           secondInputCreated = true;
         }
-        // Save input value to local storage
-        localStorage.setItem('headingOneInputValue', inputElement.value.trim());
       } else {
         alert('Please fill in the blank');
       }
@@ -74,10 +63,10 @@ function initHeadingOne() {
     dropdownElement.classList.add('invisible');
   });
 
-  // Handle input events to save empty input value to local storage
+  // Handle input events to clear input value when empty
   inputElement.addEventListener('input', () => {
     if (inputElement.value.trim() === '') {
-      localStorage.setItem('headingOneInputValue', '');
+      inputValue = '';
     }
   });
 }
